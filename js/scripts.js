@@ -19,10 +19,42 @@ var divide = function(number1, number2) {
 
 
 //user logic
-  var number1 = parseInt(prompt("Enter a number"));
-  var number2 = parseInt(prompt("Enter another number"));
-  
-  
-  var result = divide(number1, number2);
-  alert(result);
+$(document).ready(function() {
+  $(".btnAdd").click(function() {
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    event.preventDefault();
+    var result = (add(number1, number2));
+    $("#result").text(result);
+    $("#result").show();
 
+  });
+  $(".btnSub").click(function() {
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    event.preventDefault();
+    var result = (subtract(number1, number2));
+    $("#result").text(result);
+    $("#result").show();
+
+  });
+  $(".btnDiv").click(function() {
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    event.preventDefault();
+    var result = (divide(number1, number2));
+    $("#result").text(result);
+    $("#result").show();
+
+  });
+
+  $(".btnMult").click(function() {
+    var number1 = parseInt($("#input1").val());
+    var number2 = parseInt($("#input2").val());
+    event.preventDefault();
+    var result = (multiply(number1, number2));
+    $("#result").text(result);
+    $("#result").show();
+
+  });
+});
